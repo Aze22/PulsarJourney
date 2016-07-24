@@ -42,7 +42,7 @@ public class GalleryController : MonoBehaviour {
     private void SetContentToChapter( int _newChapter )
     {
         m_currentChapter = _newChapter;
-        m_image.sprite.name = string.Concat("Chapter_", m_currentChapter);
+        m_image.sprite = Resources.Load<Sprite>(string.Concat("Photos/Chapter_", m_currentChapter));
         m_chapterText.text = Localization.Get(string.Concat("Chapter_", m_currentChapter, "_Title"));
         m_contentText.text = Localization.Get(string.Concat("Chapter_", m_currentChapter, "_Content"));
     }
