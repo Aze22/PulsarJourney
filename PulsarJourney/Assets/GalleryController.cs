@@ -32,6 +32,7 @@ public class GalleryController : MonoBehaviour {
     public void ResetGallery()
     {
         SetContentToChapter(0);
+        CheckButtons();
     }
 
     public void MenuClicked()
@@ -52,7 +53,7 @@ public class GalleryController : MonoBehaviour {
         if(m_currentChapter < 11)
             ChangeToChapter(m_currentChapter + 1);
 
-        CheckButtons();
+        //CheckButtons();
     }
 
     public int GetCurrentChapter()
@@ -82,6 +83,7 @@ public class GalleryController : MonoBehaviour {
         TweenGroupAlpha.Begin(m_contentCanvas, 0.5f, 0);
         yield return new WaitForSeconds(1f);
         SetContentToChapter(_newChapter);
+        CheckButtons();
         TweenGroupAlpha.Begin(m_contentCanvas, 0.5f, 1);
     }
 
@@ -90,7 +92,7 @@ public class GalleryController : MonoBehaviour {
         if(m_currentChapter > 0)
             ChangeToChapter(m_currentChapter - 1);
 
-        CheckButtons();
+        //CheckButtons();
     }
 
     public void CheckButtons()
@@ -102,7 +104,7 @@ public class GalleryController : MonoBehaviour {
         else
             m_previousButton.interactable = true;
 
-        if ( m_currentChapter >= 11 )
+        if ( m_currentChapter >= 12 )
         {
             m_nextButton.interactable = false;
         }

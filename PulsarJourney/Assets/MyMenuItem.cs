@@ -20,6 +20,14 @@ public class MyMenuItem : MonoBehaviour
         GetComponent<Button>().onClick.AddListener(delegate
         {
             UIManager.Instance.m_galleryController.ChangeToChapter(transform.GetSiblingIndex());
+            if ( transform.GetSiblingIndex() == 0 )
+                UIManager.Instance.m_galleryController.m_previousButton.interactable = false;
+            else
+                UIManager.Instance.m_galleryController.m_previousButton.interactable = true;
+            if ( transform.GetSiblingIndex() == 12 )
+                UIManager.Instance.m_galleryController.m_nextButton.interactable = false;
+            else
+                UIManager.Instance.m_galleryController.m_nextButton.interactable = true;
         });
     }
 	

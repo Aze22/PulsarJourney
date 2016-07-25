@@ -9,6 +9,7 @@ public class MenuController : MonoBehaviour {
     public static MenuController Instance;
     public Button m_left;
     public Button m_right;
+    public Button m_menu;
 
     public bool IsShown()
     {
@@ -50,11 +51,15 @@ public class MenuController : MonoBehaviour {
             transform.FindChild("Background").GetChild(UIManager.Instance.m_galleryController.GetCurrentChapter()).GetComponent<Button>().interactable = false;
             m_left.gameObject.SetActive(false);
             m_right.gameObject.SetActive(false);
+            m_menu.gameObject.SetActive(false);
         }
         else
         {
             m_left.gameObject.SetActive(true);
             m_right.gameObject.SetActive(true);
+            m_menu.gameObject.SetActive(true);
         }
+
+        UIManager.Instance.m_galleryController.CheckButtons();
     }
 }
