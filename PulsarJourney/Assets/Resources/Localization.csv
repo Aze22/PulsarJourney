@@ -1,13 +1,15 @@
 KEY,English
 Welcome_Title,Welcome
-Welcome_Text,"Please <b>plug in your earphones</b>, make sure <b>volume is enabled</b>.
+Welcome_Text,"Please <b>plug in your earphones</b> and make sure <b>volume is enabled</b>.
 
-Now, move towards the <b>first painting</b> and press <b><i>Start</i></b>."
+When you are ready, move towards the <b>first painting</b> and press <b><i>Start</i></b>."
 Start,Start
 Yes,Yes
 No,No
 Exit,Exit
 Menu,Menu
+Chapter_0_Title,Introduction
+Chapter_0_Content,"Hello, this a presentation text!"
 Chapter_1_Title,Chapter 1\nThe Star Declines
 Chapter_1_Content,"Bright star,
 I am on the edges of states.
@@ -69,12 +71,12 @@ Pulsar Maps"
 Chapter_9_Content,"They send out messages,
 For fear to be alone,
 Or to be forgotten.
-They want to share their discoveries
+They want to share their discoveries.
 They long to be found."
 Chapter_10_Title,"Chapter 10
 Pulsar Structure"
 Chapter_10_Content,"They try to guess the nature of our heart.
-The relation between the inside
+The relation between the inside.
 And the outside."
 Chapter_11_Title,"Chapter 11
 Pulsar Stops"
@@ -82,5 +84,5 @@ Chapter_11_Content,"Nature flows,
 At every scale.
 It shines,
 beyond the edge of our perception.
-Nothing stops,
+Nothing stops.
 Everything is in motion."

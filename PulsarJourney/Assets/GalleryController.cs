@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class GalleryController : MonoBehaviour {
 
     CanvasGroup m_canvasGroup;
-    private int m_currentChapter = 1;
+    private int m_currentChapter = 0;
     public Text m_chapterText;
     public Text m_contentText;
     public Image m_image;
@@ -31,12 +31,12 @@ public class GalleryController : MonoBehaviour {
 
     public void ResetGallery()
     {
-        SetContentToChapter(1);
+        SetContentToChapter(0);
     }
 
     public void MenuClicked()
     {
-
+        UIManager.Instance.m_menuController.Show(true);
     }
 
     private void SetContentToChapter( int _newChapter )
@@ -55,8 +55,16 @@ public class GalleryController : MonoBehaviour {
         CheckButtons();
     }
 
-    private void ChangeToChapter(int _newChapter)
+    public int GetCurrentChapter()
     {
+        return m_currentChapter;
+    }
+
+    public void ChangeToChapter(int _newChapter)
+    {
+        if ( UIManager.Instance.m_menuController.IsShown() )
+            UIManager.Instance.m_menuController.Show(false);
+
         m_currentChapter = _newChapter;
 
         if ( m_changeChapterRoutine != null )
@@ -79,7 +87,7 @@ public class GalleryController : MonoBehaviour {
 
     public void PreviousClicked()
     {
-        if(m_currentChapter > 1)
+        if(m_currentChapter > 0)
             ChangeToChapter(m_currentChapter - 1);
 
         CheckButtons();
@@ -87,7 +95,7 @@ public class GalleryController : MonoBehaviour {
 
     public void CheckButtons()
     {
-        if ( m_currentChapter <= 1 )
+        if ( m_currentChapter <= 0 )
         {
             m_previousButton.interactable = false;
         }
