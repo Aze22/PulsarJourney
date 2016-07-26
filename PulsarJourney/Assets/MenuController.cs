@@ -60,6 +60,6 @@ public class MenuController : MonoBehaviour {
             m_menu.gameObject.SetActive(true);
         }
 
-        UIManager.Instance.m_galleryController.CheckButtons();
+        //UIManager.Instance.m_galleryController.CheckButtons();
     }
 }
