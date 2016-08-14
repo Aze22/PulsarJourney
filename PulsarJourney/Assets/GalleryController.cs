@@ -13,6 +13,8 @@ public class GalleryController : MonoBehaviour {
 
     public Button m_previousButton;
     public Button m_nextButton;
+    public Scrollbar m_scrollbar;
+    public ScrollRect m_scrollRect;
 
     private IEnumerator m_changeChapterRoutine;
 
@@ -26,6 +28,7 @@ public class GalleryController : MonoBehaviour {
         gameObject.SetActive(true);
         ResetGallery();
         m_canvasGroup.alpha = 0f;
+        m_scrollRect.verticalNormalizedPosition = 1;
         TweenGroupAlpha.Begin(m_canvasGroup, 1.5f, 1f, 1.5f);
     }
 
@@ -46,11 +49,13 @@ public class GalleryController : MonoBehaviour {
         m_image.sprite = Resources.Load<Sprite>(string.Concat("Photos/Chapter_", m_currentChapter));
         m_chapterText.text = Localization.Get(string.Concat("Chapter_", m_currentChapter, "_Title"));
         m_contentText.text = Localization.Get(string.Concat("Chapter_", m_currentChapter, "_Content"));
+       
+        
     }
 
     public void NextClicked()
     {
-        if(m_currentChapter < 11)
+        if(m_currentChapter < 12)
             ChangeToChapter(m_currentChapter + 1);
 
         //CheckButtons();
@@ -83,6 +88,9 @@ public class GalleryController : MonoBehaviour {
         TweenGroupAlpha.Begin(m_contentCanvas, 0.5f, 0);
         yield return new WaitForSeconds(1f);
         SetContentToChapter(_newChapter);
+        yield return null;
+       // m_scrollRect.verticalScrollbar.value = 1f;
+        m_scrollRect.verticalNormalizedPosition = 1;
         CheckButtons();
         TweenGroupAlpha.Begin(m_contentCanvas, 0.5f, 1);
     }

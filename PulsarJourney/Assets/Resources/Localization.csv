@@ -9,7 +9,7 @@ No,No
 Exit,Exit
 Menu,Menu
 Chapter_0_Title,Introduction
-Chapter_0_Content,"Hello, this a presentation text!"
+Chapter_0_Content,"Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! "
 Chapter_1_Title,Chapter 1\nThe Star Declines
 Chapter_1_Content,"Bright star,
 I am on the edges of states.
@@ -86,3 +86,5 @@ It shines,
 beyond the edge of our perception.
 Nothing stops.
 Everything is in motion."
+Chapter_12_Title,Thank You
+Chapter_12_Content,You can support me on...
