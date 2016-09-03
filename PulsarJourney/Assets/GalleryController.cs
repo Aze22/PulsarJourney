@@ -46,8 +46,22 @@ public class GalleryController : MonoBehaviour {
     private void SetContentToChapter( int _newChapter )
     {
         m_currentChapter = _newChapter;
-        m_image.sprite = Resources.Load<Sprite>(string.Concat("Photos/Chapter_", m_currentChapter));
+        m_image.sprite = Resources.Load<Sprite>(string.Concat("Photos/Chapter_", (m_currentChapter > 0 ? (m_currentChapter-1) : m_currentChapter)));
         m_chapterText.text = Localization.Get(string.Concat("Chapter_", m_currentChapter, "_Title"));
+
+        if ( m_currentChapter == 1 || m_currentChapter == 13 )
+        {
+            m_image.sprite = null;
+            m_image.color = Color.black;
+        }
+        else
+        {
+            m_image.color = Color.white;
+        }
+
+        if ( m_chapterText.text == string.Concat("Chapter_", m_currentChapter, "_Title") )
+            m_chapterText.text = "";
+
         m_contentText.text = Localization.Get(string.Concat("Chapter_", m_currentChapter, "_Content"));
        
         
@@ -55,7 +69,7 @@ public class GalleryController : MonoBehaviour {
 
     public void NextClicked()
     {
-        if(m_currentChapter < 12)
+        if(m_currentChapter < 14)
             ChangeToChapter(m_currentChapter + 1);
 
         //CheckButtons();
@@ -112,7 +126,7 @@ public class GalleryController : MonoBehaviour {
         else
             m_previousButton.interactable = true;
 
-        if ( m_currentChapter >= 12 )
+        if ( m_currentChapter >= 14 )
         {
             m_nextButton.interactable = false;
         }

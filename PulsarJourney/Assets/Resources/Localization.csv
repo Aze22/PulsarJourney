@@ -9,82 +9,107 @@ No,No
 Exit,Exit
 Menu,Menu
 Chapter_0_Title,Introduction
-Chapter_0_Content,"Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! Hello, this a presentation text! "
-Chapter_1_Title,Chapter 1\nThe Star Declines
-Chapter_1_Content,"Bright star,
+Chapter_0_Content,"Hello, and welcome to this companion app to the narrative installation <b>The Pulsar's Jouney</b>!
+
+I will quickly introduce the project before I'll let you wander from painting to painting. In 2017 it will be <b>the 50th anniversary</b> of the discovery of the first pulsar by <i>Jocelyn Bell</i>.
+
+This object has long fascinated me and when I met with the people at PARI we talked about their collection and their desire to attract people beyond science fans. Our intention is to communicate widely and share our passion for the stars.
+
+This exhibition narrates <b>the story of a pulsar</b>, of its discovery, of its study. We'll brush on various topics of astronomy but we'll also look at how scientists and artists look at the strange and the foreign, how they approach what is different and new.
+
+Each chapter is composed of <b>a unique painting</b>, a <b>paragraph that will be read</b> to you and <b>LED lighting</b> that is controlled by <i>Arduino</i> cards placed at the back of the paintings. 
+
+You are <b>welcome to take photographs and share</b> them with your friends and on social media, but if you do please credit the artist for this work.
+
+The project is partly self funded, supported by PARI and the artists Patrons:
+<b>https://www.patreon.com/FromTheEdge</b>
+Your support will be welcome so that the exhibition can then travel to Europe, you can <b>visit the artist page</b> to support her, visit the PARI website to help them host future art exhibitions, and you can also buy postcards and catalogue on the site.
+
+We <b>thank you</b> for your visit and we wish you a very enjoyable experience!"
+Chapter_1_Title,
+Chapter_1_Content,"Mostly, what lives outside of our mind is unknown. "
+Chapter_2_Title,Chapter 1
+Chapter_2_Content,"Bright star,
 I am on the edges of states.
 Something within me has started long ago,
 A fire,
 Always brighter.
+
 I run to my own end."
-Chapter_2_Title,Chapter 2\nBirth of a Pulsar
-Chapter_2_Content,"The end,
+Chapter_3_Title,Chapter 2
+Chapter_3_Content,"The end,
 A new beginning.
 Fire ceased.
-I am changed, profoundly
+I am changed, profoundly.
 Collapsed onto my core.
 I drag things to me,
 And to their own transformation."
-Chapter_3_Title,"Chapter 3
-Life of a Pulsar"
-Chapter_3_Content,"They used to look at me for light.
+Chapter_4_Title,Chapter 3
+Chapter_4_Content,"They used to look at me for light.
 Now, they think I am darkness.
 I sing,
 Unheard.
 I became invisible to their eyes."
-Chapter_4_Title,"Chapter 4
-Discovery"
-Chapter_4_Content,"They stumble upon me.
+Chapter_5_Title,Chapter 4
+Chapter_5_Content,"They stumble upon me.
 They think I am somebody else,
 A thing more akin to their own."
-Chapter_5_Title,"Chapter 5
-A Novel Kind of Star"
-Chapter_5_Content,"They isolate things,
+Chapter_6_Title,Chapter 5
+Chapter_6_Content,"They isolate things,
 Abstract things,
 That is how they understand,
 Partially,
 Then they name us,
 Pulsars."
-Chapter_6_Title,"Chapter 6
-Gravitational Radiations"
-Chapter_6_Content,"They use us to construct theories.
+Chapter_7_Title,Chapter 6
+Chapter_7_Content,"They use us to construct theories.
 They listen to half the symphony
-And try to decipher a code
-They hope will lead them to their origins."
-Chapter_7_Title,"Chapter 7
-Radio Waves"
-Chapter_7_Content,"They build machines,
+And try to decipher, 
+A code
+That they hope, will lead them to their origins."
+Chapter_8_Title,Chapter 7
+Chapter_8_Content,"They build machines,
 Great listeners.
 They capture the invisible.
-They transform it,
+They transcribe it,
 Isolate it,
-Abstract it."
-Chapter_8_Title,"Chapter 8
-Gamma Rays"
-Chapter_8_Content,"They seek the boundaries.
+Abstract it into their language."
+Chapter_9_Title,Chapter 8
+Chapter_9_Content,"They seek the boundaries.
 They push their limits.
 They long for the hidden light.
+
 Young creatures.
 Through us they embark on a voyage in time."
-Chapter_9_Title,"Chapter 9
-Pulsar Maps"
-Chapter_9_Content,"They send out messages,
+Chapter_10_Title,Chapter 9
+Chapter_10_Content,"They send out messages,
 For fear to be alone,
 Or to be forgotten.
-They want to share their discoveries.
-They long to be found."
-Chapter_10_Title,"Chapter 10
-Pulsar Structure"
-Chapter_10_Content,"They try to guess the nature of our heart.
-The relation between the inside.
-And the outside."
-Chapter_11_Title,"Chapter 11
-Pulsar Stops"
-Chapter_11_Content,"Nature flows,
+
+They long to be found.
+Or to find themselves."
+Chapter_11_Title,Chapter 10
+Chapter_11_Content,"They try to guess the nature of our hearts.
+The relation between the inside
+And the outside.
+
+But what do they seek in knowing this? "
+Chapter_12_Title,Chapter 11
+Chapter_12_Content,"To predict an end?
+
+Nature flows,
 At every scale.
 It shines,
-beyond the edge of our perception.
+Beyond the edge of our perception.
 Nothing stops.
+Or gets lost.
 Everything is in motion."
-Chapter_12_Title,Thank You
-Chapter_12_Content,You can support me on...
+Chapter_13_Title,
+Chapter_13_Content,"To know your world, is to know yourself. "
+Chapter_14_Title,Afterword
+Chapter_14_Content,"Thank you for visiting the installation.
+It has been a joy to bring this project to reality and to know that visitors like you were able to live this pulsar's journey.
+
+You can find more infrormation about the project genesis, about the work of the artist and find out more precisely why each painting looks like it does, in the exhibition catalogue.
+
+This free application has been made for you by <i>Haze Games Studio</i> a generous developer of very smart games."
