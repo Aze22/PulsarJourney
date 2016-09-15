@@ -22,11 +22,6 @@ public class MenuController : MonoBehaviour {
         m_group.interactable = false;
         m_group.blocksRaycasts = false;
     }
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
     public void Show( bool state )
     {
@@ -48,7 +43,25 @@ public class MenuController : MonoBehaviour {
 
         if ( state )
         {
-            transform.FindChild("Background").GetChild(UIManager.Instance.m_galleryController.GetCurrentChapter()).GetComponent<Button>().interactable = false;
+            int currentChapter = UIManager.Instance.m_galleryController.GetCurrentChapter();
+
+            if ( currentChapter == 1 || currentChapter == 2 )
+            {
+                transform.FindChild("Background").GetChild(1).GetComponent<Button>().interactable = false;
+            }
+            else if ( currentChapter == 13 || currentChapter == 14 )
+            {
+                transform.FindChild("Background").GetChild(12).GetComponent<Button>().interactable = false;
+            }
+            else if (currentChapter == 0)
+            {
+                transform.FindChild("Background").GetChild(0).GetComponent<Button>().interactable = false;
+            }
+            else
+            {
+                transform.FindChild("Background").GetChild(UIManager.Instance.m_galleryController.GetCurrentChapter() - 1).GetComponent<Button>().interactable = false;
+            }
+
             m_left.gameObject.SetActive(false);
             m_right.gameObject.SetActive(false);
             m_menu.gameObject.SetActive(false);

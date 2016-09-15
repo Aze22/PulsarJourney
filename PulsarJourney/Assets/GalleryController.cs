@@ -8,11 +8,13 @@ public class GalleryController : MonoBehaviour {
     private int m_currentChapter = 0;
     public Text m_chapterText;
     public Text m_contentText;
+    public Text m_centerText;
     public Image m_image;
     public CanvasGroup m_contentCanvas;
 
     public Button m_previousButton;
     public Button m_nextButton;
+    public Button m_menuButton;
     public Scrollbar m_scrollbar;
     public ScrollRect m_scrollRect;
 
@@ -43,28 +45,51 @@ public class GalleryController : MonoBehaviour {
         UIManager.Instance.m_menuController.Show(true);
     }
 
+    public void SetQuoteMode( bool newState )
+    {
+        if ( newState )
+        {
+            m_image.sprite = null;
+            m_image.color = Color.black;
+            m_contentText.text = "";
+            m_chapterText.text = "";
+        }
+        else
+        {
+            m_image.color = Color.white;
+            m_centerText.text = "";
+        }
+
+        m_centerText.gameObject.SetActive(newState);
+
+        //m_nextButton.gameObject.SetActive(!newState);
+        //m_previousButton.gameObject.SetActive(!newState);
+
+        m_menuButton.gameObject.SetActive(!newState);
+    }
+
     private void SetContentToChapter( int _newChapter )
     {
         m_currentChapter = _newChapter;
         m_image.sprite = Resources.Load<Sprite>(string.Concat("Photos/Chapter_", (m_currentChapter > 0 ? (m_currentChapter-1) : m_currentChapter)));
         m_chapterText.text = Localization.Get(string.Concat("Chapter_", m_currentChapter, "_Title"));
+        m_contentText.text = Localization.Get(string.Concat("Chapter_", m_currentChapter, "_Content"));
+
+        CancelInvoke("NextClicked");
 
         if ( m_currentChapter == 1 || m_currentChapter == 13 )
         {
-            m_image.sprite = null;
-            m_image.color = Color.black;
+            m_centerText.text = m_contentText.text;
+            SetQuoteMode(true);
+            Invoke("NextClicked", 4);
         }
         else
         {
-            m_image.color = Color.white;
+            SetQuoteMode(false);          
         }
 
         if ( m_chapterText.text == string.Concat("Chapter_", m_currentChapter, "_Title") )
             m_chapterText.text = "";
-
-        m_contentText.text = Localization.Get(string.Concat("Chapter_", m_currentChapter, "_Content"));
-       
-        
     }
 
     public void NextClicked()
