@@ -90,6 +90,8 @@ public class GalleryController : MonoBehaviour {
 
         if ( m_chapterText.text == string.Concat("Chapter_", m_currentChapter, "_Title") )
             m_chapterText.text = "";
+
+        SupportButtons();
     }
 
     public void AutoNextClicked()
@@ -139,10 +141,18 @@ public class GalleryController : MonoBehaviour {
         yield return null;
         m_nextButton.interactable = true;
         m_previousButton.interactable = true;
-        // m_scrollRect.verticalScrollbar.value = 1f;
         m_scrollRect.verticalNormalizedPosition = 1;
         CheckButtons();
         TweenGroupAlpha.Begin(m_contentCanvas, 0.5f, 1);
+
+    }
+
+    public void SupportButtons()
+    {
+        if ( m_currentChapter == 0 || m_currentChapter == 14 )
+            UIManager.Instance.ShowSupportButtons();
+        else
+            UIManager.Instance.HideSupportButtons();
     }
 
     public void PreviousClicked()
