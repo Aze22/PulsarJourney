@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Audio;
 
 public class UIManager : MonoBehaviour
 {
@@ -8,6 +9,12 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance;
     public MenuController m_menuController;
     public GameObject m_supportButtons;
+
+    public AudioMixer m_audioMixer;
+    public AudioMixerSnapshot m_normalSnapshot;
+    public AudioMixerSnapshot m_offSnapshot;
+    public AudioSource m_chapterMusic;
+    public AudioSource m_chapterVoiceOver;
 
     void Awake()
     {
@@ -47,5 +54,15 @@ public class UIManager : MonoBehaviour
     public void ViewMyWebsiteClicked()
     {
         Application.OpenURL("http://www.pari.edu/support-pari/");
+    }
+
+    public void FadeInSound()
+    {
+        m_normalSnapshot.TransitionTo(2);
+    }
+
+    public void FadeOutSound()
+    {
+        m_offSnapshot.TransitionTo(2);
     }
 }

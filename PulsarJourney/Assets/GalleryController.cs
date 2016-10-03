@@ -92,6 +92,35 @@ public class GalleryController : MonoBehaviour {
             m_chapterText.text = "";
 
         SupportButtons();
+        SetSoundForChapter(m_currentChapter);
+        FadeInSound();
+    }
+
+    public void FadeOutSound()
+    {
+        UIManager.Instance.FadeOutSound();
+    }
+
+    public void FadeInSound()
+    {
+        UIManager.Instance.FadeInSound();
+    }
+
+    public void SetSoundForChapter( int _currentChapter )
+    {
+        if ( m_currentChapter != 1 && m_currentChapter != 13 )
+        {
+            UIManager.Instance.m_chapterMusic.clip = Resources.Load<AudioClip>(string.Concat("Sound/Music/Chapter_Music_", _currentChapter));
+            UIManager.Instance.m_chapterMusic.Play();
+
+            UIManager.Instance.m_chapterVoiceOver.clip = Resources.Load<AudioClip>(string.Concat("Sound/Voice/Chapter_Voice_", _currentChapter));
+            UIManager.Instance.m_chapterVoiceOver.Play();
+        }
+        else
+        {
+            UIManager.Instance.m_chapterMusic.Stop();
+            UIManager.Instance.m_chapterVoiceOver.Stop();
+        }
     }
 
     public void AutoNextClicked()
@@ -136,6 +165,7 @@ public class GalleryController : MonoBehaviour {
     private IEnumerator ChangeChapterRoutine(int _newChapter)
     {
         TweenGroupAlpha.Begin(m_contentCanvas, 0.5f, 0);
+        FadeOutSound();
         yield return new WaitForSeconds(1f);
         SetContentToChapter(_newChapter);
         yield return null;
