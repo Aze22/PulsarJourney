@@ -13,6 +13,8 @@ public class UIManager : MonoBehaviour
     public AudioMixer m_audioMixer;
     public AudioMixerSnapshot m_normalSnapshot;
     public AudioMixerSnapshot m_offSnapshot;
+    public AudioMixerSnapshot m_voiceOnlySnapshot;
+    public AudioMixerSnapshot m_musicOnlySnapshot;
     public AudioSource m_chapterMusic;
     public AudioSource m_chapterVoiceOver;
 
@@ -58,11 +60,21 @@ public class UIManager : MonoBehaviour
 
     public void FadeInSound()
     {
-        m_normalSnapshot.TransitionTo(2);
+        m_normalSnapshot.TransitionTo(1.5f);
     }
 
     public void FadeOutSound()
     {
-        m_offSnapshot.TransitionTo(2);
+        m_offSnapshot.TransitionTo(1.5f);
+    }
+
+    public void VoiceOnly()
+    {
+        m_voiceOnlySnapshot.TransitionTo(1.5f);
+    }
+
+    public void MusicOnly()
+    {
+        m_musicOnlySnapshot.TransitionTo(1.5f);
     }
 }

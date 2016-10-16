@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class GalleryController : MonoBehaviour {
 
     CanvasGroup m_canvasGroup;
-    private int m_currentChapter = 0;
+    public int m_currentChapter = 0;
     public Text m_chapterText;
     public Text m_contentText;
     public Text m_centerText;
@@ -81,7 +81,12 @@ public class GalleryController : MonoBehaviour {
         {
             m_centerText.text = m_contentText.text;
             SetQuoteMode(true);
-            Invoke("AutoNextClicked", 4);
+
+            if (m_currentChapter == 1)
+                Invoke("AutoNextClicked", 6);
+
+            if (m_currentChapter == 13)
+                Invoke("AutoNextClicked", 6);
         }
         else
         {
@@ -94,6 +99,9 @@ public class GalleryController : MonoBehaviour {
         SupportButtons();
         SetSoundForChapter(m_currentChapter);
         FadeInSound();
+
+        if (m_currentChapter == 1 || m_currentChapter == 13)
+            FadeOutMusic();
     }
 
     public void FadeOutSound()
@@ -101,42 +109,61 @@ public class GalleryController : MonoBehaviour {
         UIManager.Instance.FadeOutSound();
     }
 
+    public void FadeOutVoice()
+    {
+        UIManager.Instance.MusicOnly();
+    }
+
     public void FadeInSound()
     {
         UIManager.Instance.FadeInSound();
+    }
+
+    public void FadeOutMusic()
+    {
+        UIManager.Instance.VoiceOnly();
     }
 
     public void SetSoundForChapter( int _currentChapter )
     {
         if ( m_currentChapter != 1 && m_currentChapter != 13 )
         {
-            UIManager.Instance.m_chapterMusic.clip = Resources.Load<AudioClip>(string.Concat("Sound/Music/Chapter_Music_", _currentChapter));
-            UIManager.Instance.m_chapterMusic.Play();
+            //UIManager.Instance.m_chapterMusic.clip = Resources.Load<AudioClip>(string.Concat("Sound/Music/Chapter_Music_", _currentChapter -1));
+            //UIManager.Instance.m_chapterMusic.Play();
 
-            UIManager.Instance.m_chapterVoiceOver.clip = Resources.Load<AudioClip>(string.Concat("Sound/Voice/Chapter_Voice_", _currentChapter));
+            UIManager.Instance.m_chapterVoiceOver.clip = Resources.Load<AudioClip>(string.Concat("Sound/Voice/Chapter_Voice_", _currentChapter -1));
             UIManager.Instance.m_chapterVoiceOver.Play();
         }
         else if (m_currentChapter == 1)
         {
-            UIManager.Instance.m_chapterMusic.Stop();
-            UIManager.Instance.m_chapterMusic.clip = null;
+            //UIManager.Instance.m_chapterMusic.Stop();
+            //UIManager.Instance.m_chapterMusic.clip = null;
 
             UIManager.Instance.m_chapterVoiceOver.clip = Resources.Load<AudioClip>(string.Concat("Sound/Voice/Chapter_Voice_", 0));
             UIManager.Instance.m_chapterVoiceOver.Play();
         }
         else if (m_currentChapter == 13)
         {
-            UIManager.Instance.m_chapterMusic.Stop();
-            UIManager.Instance.m_chapterMusic.clip = null;
+            //UIManager.Instance.m_chapterMusic.Stop();
+            //UIManager.Instance.m_chapterMusic.clip = null;
 
             UIManager.Instance.m_chapterVoiceOver.clip = Resources.Load<AudioClip>(string.Concat("Sound/Voice/Chapter_Voice_", 12));
             UIManager.Instance.m_chapterVoiceOver.Play();
         }
         else
         {
-            UIManager.Instance.m_chapterMusic.Stop();
+            //UIManager.Instance.m_chapterMusic.Stop();
             UIManager.Instance.m_chapterVoiceOver.Stop();
         }
+
+        if(m_currentChapter == 0 || m_currentChapter == 14)
+        {
+            //UIManager.Instance.m_chapterMusic.Stop();
+            UIManager.Instance.m_chapterVoiceOver.Stop();
+        }
+
+        if (m_currentChapter >= 2 && !UIManager.Instance.m_chapterMusic.isPlaying)
+            UIManager.Instance.m_chapterMusic.Play();
     }
 
     public void AutoNextClicked()
@@ -181,7 +208,8 @@ public class GalleryController : MonoBehaviour {
     private IEnumerator ChangeChapterRoutine(int _newChapter)
     {
         TweenGroupAlpha.Begin(m_contentCanvas, 0.5f, 0);
-        FadeOutSound();
+        //FadeOutSound();
+        FadeOutVoice();
         yield return new WaitForSeconds(1f);
         SetContentToChapter(_newChapter);
         yield return null;
