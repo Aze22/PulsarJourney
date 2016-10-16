@@ -116,6 +116,22 @@ public class GalleryController : MonoBehaviour {
             UIManager.Instance.m_chapterVoiceOver.clip = Resources.Load<AudioClip>(string.Concat("Sound/Voice/Chapter_Voice_", _currentChapter));
             UIManager.Instance.m_chapterVoiceOver.Play();
         }
+        else if (m_currentChapter == 1)
+        {
+            UIManager.Instance.m_chapterMusic.Stop();
+            UIManager.Instance.m_chapterMusic.clip = null;
+
+            UIManager.Instance.m_chapterVoiceOver.clip = Resources.Load<AudioClip>(string.Concat("Sound/Voice/Chapter_Voice_", 0));
+            UIManager.Instance.m_chapterVoiceOver.Play();
+        }
+        else if (m_currentChapter == 13)
+        {
+            UIManager.Instance.m_chapterMusic.Stop();
+            UIManager.Instance.m_chapterMusic.clip = null;
+
+            UIManager.Instance.m_chapterVoiceOver.clip = Resources.Load<AudioClip>(string.Concat("Sound/Voice/Chapter_Voice_", 12));
+            UIManager.Instance.m_chapterVoiceOver.Play();
+        }
         else
         {
             UIManager.Instance.m_chapterMusic.Stop();
