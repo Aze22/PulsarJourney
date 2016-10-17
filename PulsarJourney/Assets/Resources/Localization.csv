@@ -2,7 +2,7 @@ KEY,English
 Welcome_Title,Welcome
 Welcome_Text,"Please <b>plug in your earphones</b> and make sure <b>volume is enabled</b>.
 
-When you are ready, move towards the <b>first painting</b> and press <b><i>Start</i></b>."
+When you are ready, move towards the <b>first painting</b> and press <b>Start</b>."
 Start,Start
 Yes,Yes
 No,No
@@ -11,19 +11,22 @@ Menu,Menu
 Chapter_0_Title,Foreword
 Chapter_0_Content,"Hello, and welcome to this companion app to the narrative installation <b>The Pulsar's Jouney</b>!
 
-I will quickly introduce the project before I'll let you wander from painting to painting. In 2017 it will be <b>the 50th anniversary</b> of the discovery of the first pulsar by <i>Jocelyn Bell</i>.
+I will quickly introduce the project before I'll let you wander from painting to painting. In 2017 it will be <b>the 50th anniversary</b> of the discovery of the first pulsar by <b>Jocelyn Bell</b>.
 
 This object has long fascinated me and when I met with the people at PARI we talked about their collection and their desire to attract people beyond science fans. Our intention is to communicate widely and share our passion for the stars.
 
-This exhibition narrates <b>the story of a pulsar</b>, of its discovery, of its study. We'll brush on various topics of astronomy but we'll also look at how scientists and artists look at the strange and the foreign, how they approach what is different and new.
+This exhibition narrates <b>the story of a pulsar</b>, of its discovery, of its study.
+We'll brush on various topics of astronomy but we'll also look at how scientists and artists look at the strange and the foreign, how they approach what is different and new.
 
-Each chapter is composed of <b>a unique painting</b>, a <b>paragraph that will be read</b> to you and <b>LED lighting</b> that is controlled by <i>Arduino</i> cards placed at the back of the paintings. 
+Each chapter is composed of <b>a unique painting</b>, a <b>paragraph that will be read</b> to you and <b>LED lighting</b> that is controlled by <b>Arduino</b> cards placed at the back of the paintings. 
 
 You are <b>welcome to take photographs and share</b> them with your friends and on social media, but if you do please credit the artist for this work.
 
 The project is partly self funded, supported by PARI and the artists Patrons:
 <b>https://www.patreon.com/FromTheEdge</b>
-Your support will be welcome so that the exhibition can then travel to Europe, you can <b>visit the artist page</b> to support her, visit the PARI website to help them host future art exhibitions, and you can also buy postcards and catalogue on the site.
+
+Your support will be welcome so that the exhibition can then travel to Europe, you can <b>visit the artist page</b> to support her, visit the PARI website to help them host future art exhibitions.
+You can also buy postcards and catalogue on the site.
 
 We <b>thank you</b> for your visit and we wish you a very enjoyable experience!"
 Chapter_1_Title,
@@ -34,6 +37,7 @@ I am on the edges of states.
 Something within me has started long ago,
 A fire,
 Always brighter.
+
 I run to my own end."
 Chapter_3_Title,Chapter 2
 Chapter_3_Content,"The end,
@@ -63,9 +67,9 @@ Pulsars."
 Chapter_7_Title,Chapter 6
 Chapter_7_Content,"They use us to construct theories.
 They listen to half the symphony
-And try to decipher, 
-A code
-That they hope, will lead them to their origins."
+And try to decipher 
+A code,
+They hope will lead them to their origins."
 Chapter_8_Title,Chapter 7
 Chapter_8_Content,"They build machines,
 Great listeners.
@@ -82,10 +86,10 @@ Young creatures.
 Through us they embark on a voyage in time."
 Chapter_10_Title,Chapter 9
 Chapter_10_Content,"They send out messages,
-For fear to be alone,
-Or to be forgotten.
+From the fear of being alone,
+Or of being forgotten.
 
-They long to be found.
+They long to be found,
 Or to find themselves."
 Chapter_11_Title,Chapter 10
 Chapter_11_Content,"They try to guess the nature of our hearts.
@@ -107,10 +111,13 @@ Chapter_13_Title,
 Chapter_13_Content,"To know your world, is to know yourself. "
 Chapter_14_Title,Afterword
 Chapter_14_Content,"Thank you for visiting the installation.
+
 It has been a joy to bring this project to reality and to know that visitors like you were able to live this pulsar's journey.
 
-You can find more information about the project genesis, about the work of the artist and find out more precisely why each painting looks like it does, in the exhibition catalogue.
-You can support the PARI here by making a donation so that they can host more art and science projects in the future. 
-You can support the artist here so that she can continue to create installations for institutions and museums fo free by making a donation on her patreon page. 
+You can find more information about the project genesis, about the work of the artist and find out more precisely why each painting looks like it does, in <b>the exhibition catalogue</b>.
 
-This free application has been made for you by <i>Haze Games Studio</i> a generous developer of very smart games."
+You can <b>support the artist</b> so that she can continue to create installations for institutions and museums fo free by making a donation on her <b>Patreon</b> page.
+
+You can <b>support the PARI</b> by making a donation so that they can host more art and science projects in the future.
+
+This free application has been made for you by Haze Games Studio a generous developer of very smart games."
