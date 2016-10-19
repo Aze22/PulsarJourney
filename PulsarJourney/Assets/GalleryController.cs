@@ -162,7 +162,7 @@ public class GalleryController : MonoBehaviour {
             UIManager.Instance.m_chapterVoiceOver.Stop();
         }
 
-        if (m_currentChapter >= 2 && !UIManager.Instance.m_chapterMusic.isPlaying)
+        if (m_currentChapter >= 0 && !UIManager.Instance.m_chapterMusic.isPlaying)
             UIManager.Instance.m_chapterMusic.Play();
     }
 

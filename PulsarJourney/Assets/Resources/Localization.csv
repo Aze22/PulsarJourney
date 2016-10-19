@@ -1,8 +1,9 @@
 KEY,English
 Welcome_Title,Welcome
-Welcome_Text,"Please <b>plug in your earphones</b> and make sure <b>volume is enabled</b>.
+Welcome_Text,"Thank you for downloading this app that will guide you through the installation.
+Please <b>plug in your earphones</b> and make sure <b>volume is enabled</b>.
 
-When you are ready, move towards the <b>first painting</b> and press <b>Start</b>."
+When you are ready, press <b>Start</b>."
 Start,Start
 Yes,Yes
 No,No
@@ -11,7 +12,7 @@ Menu,Menu
 Chapter_0_Title,Foreword
 Chapter_0_Content,"Hello, and welcome to this companion app to the narrative installation <b>The Pulsar's Jouney</b>!
 
-I will quickly introduce the project before I'll let you wander from painting to painting. In 2017 it will be <b>the 50th anniversary</b> of the discovery of the first pulsar by <b>Jocelyn Bell</b>.
+I will quickly introduce the project before I'll let you wander from one painting to the next. In 2017 it will be <b>the 50th anniversary</b> of the discovery of the first pulsar by <b>Jocelyn Bell</b>.
 
 This object has long fascinated me and when I met with the people at PARI we talked about their collection and their desire to attract people beyond science fans. Our intention is to communicate widely and share our passion for the stars.
 
@@ -26,14 +27,14 @@ The project is partly self funded, supported by PARI and the artists Patrons:
 <b>https://www.patreon.com/FromTheEdge</b>
 
 Your support will be welcome so that the exhibition can then travel to Europe, you can <b>visit the artist page</b> to support her, visit the PARI website to help them host future art exhibitions.
-You can also buy postcards and catalogue on the site.
+You can also buy postcards and catalogues on the site.
 
 We <b>thank you</b> for your visit and we wish you a very enjoyable experience!"
 Chapter_1_Title,
 Chapter_1_Content,"Mostly, what lives outside of our mind is unknown. "
 Chapter_2_Title,Chapter 1
 Chapter_2_Content,"Bright star,
-I am on the edges of states.
+I am on the edge of states.
 Something within me has started long ago,
 A fire,
 Always brighter.
@@ -86,7 +87,7 @@ Young creatures.
 Through us they embark on a voyage in time."
 Chapter_10_Title,Chapter 9
 Chapter_10_Content,"They send out messages,
-From the fear of being alone,
+For fear of being alone,
 Or of being forgotten.
 
 They long to be found,

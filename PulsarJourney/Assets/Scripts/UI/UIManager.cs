@@ -26,6 +26,7 @@ public class UIManager : MonoBehaviour
         m_supportButtons.gameObject.SetActive(false);
         Localization.language = "English";
         m_menuController.gameObject.SetActive(true);
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
     }
 	// Use this for initialization
 	void Start ()
